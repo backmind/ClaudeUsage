@@ -13,8 +13,8 @@ Query Claude Code usage programmatically from PowerShell. Monitor your 5-hour, 7
 - ✅ **Multiple output modes**: Default, Brief, ShowAll, Raw
 - ✅ **Color-coded utilization**: Green (<50%), Yellow (50-80%), Red (>80%)
 - ✅ **Detailed information**: utilization, next reset time, time remaining
-- ✅ **Claude Max support**: 7-day, Opus, and OAuth app limits
-- ✅ **Cross-platform**: Windows, macOS, Linux
+- ⏹️ **Claude Max support**: 7-day, Opus, and OAuth app limits
+- ⏹️ **Cross-platform**: Windows, macOS, Linux
 
 ## Installation
 
