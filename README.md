@@ -8,13 +8,13 @@ Query Claude Code usage programmatically from PowerShell. Monitor your 5-hour, 7
 
 ## Features
 
-✅ **Automatic token reading** from `~/.claude/.credentials.json`
-✅ **Token expiration checking**
-✅ **Multiple output modes**: Default, Brief, ShowAll, Raw
-✅ **Color-coded utilization**: Green (<50%), Yellow (50-80%), Red (>80%)
-✅ **Detailed information**: utilization, next reset time, time remaining
-✅ **Claude Max support**: 7-day, Opus, and OAuth app limits
-✅ **Cross-platform**: Windows, macOS, Linux
+- ✅ **Automatic token reading** from `~/.claude/.credentials.json`
+- ✅ **Token expiration checking**
+- ✅ **Multiple output modes**: Default, Brief, ShowAll, Raw
+- ✅ **Color-coded utilization**: Green (<50%), Yellow (50-80%), Red (>80%)
+- ✅ **Detailed information**: utilization, next reset time, time remaining
+- ✅ **Claude Max support**: 7-day, Opus, and OAuth app limits
+- ✅ **Cross-platform**: Windows, macOS, Linux
 
 ## Installation
 
