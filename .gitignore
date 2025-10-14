@@ -1,0 +1,33 @@
+# PowerShell
+*.ps1xml
+*.psc1
+
+# Build artifacts
+bin/
+obj/
+out/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Credentials (never commit)
+*credentials*
+*token*
+*.key
+
+# Test results
+TestResults/
+*.trx
+
+# Package files
+*.zip
+*.nupkg
