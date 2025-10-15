@@ -6,6 +6,8 @@
 
 Query Claude Code usage programmatically from PowerShell. Monitor your 5-hour, 7-day, and Opus usage limits directly from your terminal.
 
+![](example.png)
+
 ## Features
 
 - ✅ **Automatic token reading** from `~/.claude/.credentials.json`
