@@ -76,7 +76,7 @@ function Get-ClaudeUsage {
     # If no token provided, try to read from config files
     if (-not $Token) {
         # Read token from Claude credentials file
-        $credentialsPath = "$env:USERPROFILE\.claude\.credentials.json"
+        $credentialsPath = Join-Path (Join-Path $HOME ".claude") ".credentials.json"
 
         if (Test-Path $credentialsPath) {
             try {
