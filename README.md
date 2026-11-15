@@ -20,7 +20,7 @@ Query Claude Code usage programmatically from PowerShell. Monitor your 5-hour, 7
 
 ## Installation
 
-### From PowerShell Gallery (coming soon)
+### From PowerShell Gallery
 
 ```powershell
 Install-Module -Name ClaudeUsage -Scope CurrentUser

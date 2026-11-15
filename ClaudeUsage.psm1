@@ -52,7 +52,7 @@ function Get-ClaudeUsage {
     https://github.com/backmind/ClaudeUsage
 
     .NOTES
-    Version: 1.1.0
+    Version: 1.1.2
     Author: Yass Fuentes
     Note: seven_day, seven_day_oauth_apps, and seven_day_opus limits
     are only available for Claude Max subscribers or enterprise accounts.
