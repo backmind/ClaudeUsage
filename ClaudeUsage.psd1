@@ -1,6 +1,6 @@
 @{
     # Module metadata
-    ModuleVersion = '1.1.2'
+    ModuleVersion = '1.1.3'
     GUID = 'a8b9c0d1-e2f3-4a5b-6c7d-8e9f0a1b2c3d'
     Author = 'Yass Fuentes'
     CompanyName = ''
@@ -42,6 +42,9 @@
 
             # Release notes
             ReleaseNotes = @'
+Version 1.1.3:
+- On macOS, the token is read from the login Keychain, where Claude Code keeps it (tested by Mark Wragg)
+
 Version 1.1.2:
 - Credentials path is now built from $HOME instead of $env:USERPROFILE, so the module works on Linux (thanks to Mark Wragg)
 

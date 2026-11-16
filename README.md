@@ -3,6 +3,7 @@
 [![PowerShell Gallery](https://img.shields.io/powershellgallery/v/ClaudeUsage?label=PowerShell%20Gallery)](https://www.powershellgallery.com/packages/ClaudeUsage)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![PowerShell](https://img.shields.io/badge/PowerShell-5.1%2B-blue.svg)](https://github.com/PowerShell/PowerShell)
+[![Mentioned in Awesome PowerShell Modules](https://awesome.re/mentioned-badge.svg)](https://github.com/markwragg/awesome-powershell-modules#readme)
 
 Query Claude Code usage programmatically from PowerShell. Monitor your 5-hour, 7-day, and Opus usage limits directly from your terminal.
 
