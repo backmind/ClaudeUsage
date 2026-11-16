@@ -15,6 +15,7 @@ function Get-ClaudeUsage {
     - Opus limits (if applicable)
 
     Automatically reads the token from ~/.claude/.credentials.json
+    (on macOS, from the "Claude Code-credentials" item in the login Keychain)
 
     .PARAMETER Raw
     Returns the raw JSON response without formatting
@@ -75,12 +76,21 @@ function Get-ClaudeUsage {
 
     # If no token provided, try to read from config files
     if (-not $Token) {
-        # Read token from Claude credentials file
-        $credentialsPath = Join-Path (Join-Path $HOME ".claude") ".credentials.json"
+        # Claude Code stores its credentials in ~/.claude/.credentials.json,
+        # except on macOS, where the same JSON lives in the login Keychain
+        $credentialsJson = $null
+        if ($IsMacOS) {
+            $credentialsJson = security find-generic-password -s "Claude Code-credentials" -w 2>$null
+        }
 
-        if (Test-Path $credentialsPath) {
+        $credentialsPath = Join-Path (Join-Path $HOME ".claude") ".credentials.json"
+        if (-not $credentialsJson -and (Test-Path $credentialsPath)) {
+            $credentialsJson = Get-Content $credentialsPath -Raw
+        }
+
+        if ($credentialsJson) {
             try {
-                $credentials = Get-Content $credentialsPath | ConvertFrom-Json
+                $credentials = $credentialsJson | ConvertFrom-Json
 
                 if ($credentials.claudeAiOauth.accessToken) {
                     $Token = $credentials.claudeAiOauth.accessToken
@@ -98,14 +108,14 @@ function Get-ClaudeUsage {
                     }
                 }
             } catch {
-                Write-Host "Error reading credentials file:" -ForegroundColor Red
+                Write-Host "Error reading credentials:" -ForegroundColor Red
                 Write-Host $_.Exception.Message -ForegroundColor Red
             }
         }
 
         # If token not found
         if (-not $Token) {
-            Write-Host "Credentials file not found." -ForegroundColor Yellow
+            Write-Host "Credentials not found." -ForegroundColor Yellow
             Write-Host "Please run:" -ForegroundColor Yellow
             Write-Host "    claude setup-token" -ForegroundColor Cyan
             Write-Host "  to configure your authentication." -ForegroundColor Yellow

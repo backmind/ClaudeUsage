@@ -10,7 +10,7 @@ Query Claude Code usage programmatically from PowerShell. Monitor your 5-hour, 7
 
 ## Features
 
-- ✅ **Automatic token reading** from `~/.claude/.credentials.json`
+- ✅ **Automatic token reading** from `~/.claude/.credentials.json` (macOS Keychain on Mac)
 - ✅ **Token expiration checking**
 - ✅ **Multiple output modes**: Default, Brief, ShowAll, Raw
 - ✅ **Color-coded utilization**: Green (<50%), Yellow (50-80%), Red (>80%)
@@ -185,14 +185,14 @@ while ($true) {
 
 The module:
 
-1. Reads your OAuth token from `~/.claude/.credentials.json`
+1. Reads your OAuth token from `~/.claude/.credentials.json` (on macOS, from the `Claude Code-credentials` item in the login Keychain)
 2. Checks if the token has expired
 3. Queries the Anthropic API endpoint: `https://api.anthropic.com/api/oauth/usage`
 4. Parses and displays usage information
 
 ## Troubleshooting
 
-### "Credentials file not found"
+### "Credentials not found"
 
 Run `claude setup-token` to authenticate Claude Code.
 
